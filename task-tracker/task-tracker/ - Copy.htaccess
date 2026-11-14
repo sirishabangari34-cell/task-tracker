@@ -1,0 +1,7 @@
+# Apache (XAMPP) hardening — safe to keep; ignored by other servers.
+Options -Indexes
+
+# Do not serve the SQL dump, docs or hidden files over HTTP.
+<FilesMatch "(\.sql|\.md|\.log|\.sqlite|\.py)$">
+    Require all denied
+</FilesMatch>
